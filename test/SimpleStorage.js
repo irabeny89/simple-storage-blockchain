@@ -16,7 +16,7 @@ contract("SimpleStorage", accounts => {
   })
   it("set value event works", async () => {
     const store = await SimpleStorage.deployed();
-    const result = await store.get()
+    const result = await store.set(testData);
     assert.equal(result.logs[0].args.value, testData);
   })
 })
