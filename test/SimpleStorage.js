@@ -1,7 +1,7 @@
 const SimpleStorage = artifacts.require("SimpleStorage");
+const testData = 123;
 
 contract("SimpleStorage", accounts => {
-  const testData = 123;
   it("stores a number", async () => {
     const store = await SimpleStorage.deployed();
     const result = await store.set(testData, {
